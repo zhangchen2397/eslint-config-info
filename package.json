@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-info",
+  "version": "0.0.1",
+  "description": "common eslint config",
+  "main": "index.js",
+  "scripts": {
+    "example": "node_modules/.bin/eslint example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangchen2397/eslint-config-info.git"
+  },
+  "author": "samczhang@tencent.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}
