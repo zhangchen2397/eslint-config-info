@@ -169,7 +169,7 @@ npm install --save-dev eslint-config-info
 // 在 package.json script 中添加
 "lint": "node_modules/.bin/eslint src/**.js"
 
-//如果期望自动修复
+// 如果期望自动修复
 "lint": "node_modules/.bin/eslint src/**.js --fix"
 ```
 
@@ -187,3 +187,45 @@ var eslint = 'eslint';
 `vscode`, `webstorm` 都有相应的插件，当项目配置了相应的 `.tslintrc` 配置文件时，会即可高亮提示，非常方便。
 
 ![tips](http://3gimg.qq.com/wap30/qb-rnc/vscode_tip.jpeg)
+
+# 几种常见错误检测举例
+
+``` javascript
+// no-cond-assign 禁止条件表达式中出现赋值操作符
+// Check the user's job title
+if (user.jobTitle = "manager") {
+  // user.jobTitle is now incorrect
+}
+
+// no-constant-condition 禁止在条件中使用常量表达式
+if (false) {
+  doSomethingUnfinished();
+}
+	
+// no-unmodified-loop-condition 禁用一成不变的循环条件
+while (node) {
+  doSomething(node);
+}
+node = other;
+
+for (var j = 0; j < items.length; ++i) {
+  doSomething(items[j]);
+}
+
+while (node !== root) {
+  doSomething(node);
+}
+
+// radix 强制在parseInt()使用基数参数
+var num = parseInt("071");   // 57
+
+// no-return-await 禁止没必要的 return await
+async function foo() {
+  return await bar();
+}
+
+// eqeqeq 要求使用 === 和 !==
+if (x == 42) { }
+if ("" == text) { }
+if (obj.getStuff() != undefined) { }
+```
