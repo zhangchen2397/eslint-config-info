@@ -147,7 +147,7 @@ npm install --save-dev eslint-config-info
 
 如果是 `ts` 项目，推荐使用 `tslint` 工具配合使用，这里也针对 `ts` 项目单独抽离了一份公共的 `tslint` 配置文件。
 
-关于 `tslint` 使用，请参考 [https://github.com/yannickcr/eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+关于 `tslint-config-info` 使用，请参考 [https://github.com/zhangchen2397/tslint-config-info](https://github.com/zhangchen2397/tslint-config-info)
 
 如果是 `ts` 项目也想使用 `eslint` 工具，可以通过更改 `eslint` 的编译器为 `typescript-eslint-parser` 和添加 `tslint-plugin-typescript` 插件，参考配置如下：
 
