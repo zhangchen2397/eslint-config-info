@@ -60,25 +60,32 @@
   rules: {
     // 强制 “for” 循环中更新子句的计数器朝着正确的方向移动
     'for-direction': 'error',
+
     // 禁止使用 console
     'no-console': 'off',
+
     // 强制数组方法的回调函数中有 return 语句
     'array-callback-return': 'error',
+
     // 强制把变量的使用限制在其定义的作用域范围内
     'block-scoped-var': 'error',
+
     // 指定程序中允许的最大环路复杂度
     'complexity': ['error', { max: 10 }],
+
     // 强制所有控制语句使用一致的括号风格
     'curly': [
       'error',
       'multi-line',
       'consistent'
     ],
+
     // 强制在点号之前和之后一致的换行
     'dot-location': [
       'error',
       'property'
     ],
+
     // 要求使用 === 和 !==, null 除外
     'eqeqeq': [
       'error',
@@ -87,6 +94,7 @@
         null: 'ignore'
       }
     ],
+
     // 要求 for-in 循环中有一个 if 语句
     'guard-for-in': 'error',
     ...
@@ -95,7 +103,7 @@
 }
 ```
 
-更多详细详细补充规则，[http://eslint.cn/docs/user-guide/configuring](http://eslint.cn/docs/user-guide/configuring)
+更多详细详细补充规则，[https://github.com/zhangchen2397/eslint-config-info/blob/master/index.js](https://github.com/zhangchen2397/eslint-config-info/blob/master/index.js)
 
 # 如何使用
 
@@ -178,7 +186,7 @@ npm install --save-dev eslint-config-info
 ## 临时屏蔽规则
 
 ``` javascript
-//eslint-disable-next-line no-var
+// eslint-disable-next-line no-var
 var eslint = 'eslint';
 ```
 
@@ -229,3 +237,7 @@ if (x == 42) { }
 if ("" == text) { }
 if (obj.getStuff() != undefined) { }
 ```
+
+# 集成至开发流程及工具中
+
+如果强制要求，可以把检测过程添加到 `git` 流程中，检测到有 `error` 时，不允许提交。
